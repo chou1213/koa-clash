@@ -1,0 +1,23 @@
+{
+  "name": "koa-clash",
+  "version": "1.0.0",
+  "description": "Koa server for Clash subscription links",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "ngrok": "ngrok http http://localhost:7180"
+  },
+  "dependencies": {
+    "koa": "^2.14.2",
+    "koa-router": "^12.0.0",
+    "koa-bodyparser": "^4.4.1",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["koa", "clash", "subscription", "proxy"],
+  "author": "",
+  "license": "MIT"
+}
