@@ -68,6 +68,19 @@ router.get('/clash', async (ctx) => {
     
     ctx.set('Content-Type', 'application/x-yaml');
     ctx.set('Content-Disposition', 'attachment; filename=clash.yaml');
+
+    // upload: 已上传流量（单位：Bytes）
+    // download: 已下载流量（单位：Bytes）
+    // total: 总流量限制（单位：Bytes）
+    // expire: 过期时间（Unix 时间戳，秒），可选。
+    // const upload = 5368709120;   // e.g., 5368709120 (5GB)
+    // const download = 10737418240; // e.g., 10737418240 (10GB)
+    // const total = 107374182400;     // e.g., 107374182400 (100GB)
+    // const expire = 1678888888;      // Unix timestamp
+    // const userInfoStr = `upload=${upload}; download=${download}; total=${total}; expire=${expire}`;
+    // ctx.set('Subscription-Userinfo', userInfoStr);
+    // ctx.set('profile-update-interval', '86400');
+
     ctx.body = configContent;
     
   } catch (error) {
